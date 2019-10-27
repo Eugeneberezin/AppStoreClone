@@ -11,9 +11,9 @@ import Foundation
 class Service {
     
     static let shared = Service() //Singleton
-    func fetchApps(completion: @escaping ([Result], Error?) -> ()) {
+    func fetchApps(searchTerm: String, completion: @escaping ([Result], Error?) -> ()) {
         
-        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
+        let urlString = "https://itunes.apple.com/search?term=\(searchTerm.lowercased())&entity=software"
                  guard let url = URL(string: urlString) else { return }
 
                  // fetch data from internet
@@ -25,9 +25,6 @@ class Service {
                          return
                      }
 
-                     // success
-         //            print(data)
-         //            print(String(data: data!, encoding: .utf8))
 
                      guard let data = data else { return }
 
