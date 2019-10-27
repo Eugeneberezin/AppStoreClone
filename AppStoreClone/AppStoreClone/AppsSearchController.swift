@@ -86,6 +86,7 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
          
        }
     
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellID, for: indexPath) as! SearchResultCell
         let appResult = appResults[indexPath.item]
