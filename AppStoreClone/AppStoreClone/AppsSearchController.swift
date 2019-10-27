@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -18,18 +19,40 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: searchCellID)
+        fetchITunesApps()
         
     }
     
+    fileprivate var appResults = [Result]()
+    
+   fileprivate func fetchITunesApps() {
+    Service.shared.fetchApps { [weak self] (result, err) in
+        if let err = err {
+            print("Failed to fetch data: ", err)
+            return
+        }
+        
+        self?.appResults = result
+        
+        DispatchQueue.main.async {
+            self?.collectionView.reloadData()
+        }
+        
+    }
+         
+       }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellID, for: indexPath) as! SearchResultCell
+        let appResult = appResults[indexPath.item]
+        cell.appResult = appResult
         return cell
     }
     
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return appResults.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
