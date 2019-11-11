@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     private let hCellID = "Horizontal cell id"
+    
+    var appGroudp: AppGroup?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +27,14 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return appGroudp?.feed.results.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hCellID, for: indexPath) as! AppRowCell
+        cell.nameLabel.text = appGroudp?.feed.results[indexPath.item].name
+        cell.companyLabel.text = appGroudp?.feed.results[indexPath.item].artistName
+        cell.imageView.sd_setImage(with: URL(string: appGroudp?.feed.results[indexPath.item].artworkUrl100 ?? ""))
         
         return cell
     }
