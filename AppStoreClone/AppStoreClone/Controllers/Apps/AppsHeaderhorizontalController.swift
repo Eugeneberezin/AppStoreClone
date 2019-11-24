@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AppsHeaderhorizontalController: BaseListController, UICollectionViewDelegateFlowLayout  {
+class AppsHeaderhorizontalController: HorizontalSnappingController, UICollectionViewDelegateFlowLayout  {
     
     private let headerCellID = "headerCellID"
     
@@ -20,10 +20,7 @@ class AppsHeaderhorizontalController: BaseListController, UICollectionViewDelega
         collectionView.backgroundColor = .white
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: headerCellID)
         
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
-            layout.scrollDirection = .horizontal
-            
-        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

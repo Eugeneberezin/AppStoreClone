@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055D07A7238B3C800038E2AA /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D07A6238B3C800038E2AA /* HorizontalSnappingController.swift */; };
 		05A32974236F511C00DF90C2 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32973236F511C00DF90C2 /* AppsPageController.swift */; };
 		05A32977236F570900DF90C2 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32976236F570900DF90C2 /* AppsGroupCell.swift */; };
 		05A32979236F5D5800DF90C2 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32978236F5D5800DF90C2 /* AppsHorizontalController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055D07A6238B3C800038E2AA /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		05A32973236F511C00DF90C2 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		05A32976236F570900DF90C2 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		05A32978236F5D5800DF90C2 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				05A32976236F570900DF90C2 /* AppsGroupCell.swift */,
+				055D07A6238B3C800038E2AA /* HorizontalSnappingController.swift */,
 				05A3297C236F684500DF90C2 /* AppRowCell.swift */,
 				05A32980236F753800DF90C2 /* AppsPageHeader.swift */,
 				05A32984236F810800DF90C2 /* AppHeaderAppCell.swift */,
@@ -326,6 +329,7 @@
 				05A4C1BC2364D87900156D56 /* AppDelegate.swift in Sources */,
 				05A4C1E02364EA3E00156D56 /* AppsSearchController.swift in Sources */,
 				05A32977236F570900DF90C2 /* AppsGroupCell.swift in Sources */,
+				055D07A7238B3C800038E2AA /* HorizontalSnappingController.swift in Sources */,
 				05A32983236F787D00DF90C2 /* AppsHeaderhorizontalController.swift in Sources */,
 				05A4C1E32364F0BF00156D56 /* SearchResultCell.swift in Sources */,
 				05A4C1EE2366204A00156D56 /* Service.swift in Sources */,
