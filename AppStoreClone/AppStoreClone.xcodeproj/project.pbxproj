@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		055D07A7238B3C800038E2AA /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D07A6238B3C800038E2AA /* HorizontalSnappingController.swift */; };
 		055D07A9238B4DD00038E2AA /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D07A8238B4DD00038E2AA /* BetterSnappingLayout.swift */; };
+		055D07AB238B52E70038E2AA /* AutosizingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D07AA238B52E70038E2AA /* AutosizingCode.swift */; };
 		05A32974236F511C00DF90C2 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32973236F511C00DF90C2 /* AppsPageController.swift */; };
 		05A32977236F570900DF90C2 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32976236F570900DF90C2 /* AppsGroupCell.swift */; };
 		05A32979236F5D5800DF90C2 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A32978236F5D5800DF90C2 /* AppsHorizontalController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		055D07A6238B3C800038E2AA /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		055D07A8238B4DD00038E2AA /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		055D07AA238B52E70038E2AA /* AutosizingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizingCode.swift; sourceTree = "<group>"; };
 		05A32973236F511C00DF90C2 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		05A32976236F570900DF90C2 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		05A32978236F5D5800DF90C2 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				05A32972236F50F400DF90C2 /* Apps */,
 				05A4C1DD2364E3AC00156D56 /* BaseTabBarController.swift */,
 				05A4C1DF2364EA3E00156D56 /* AppsSearchController.swift */,
+				055D07AA238B52E70038E2AA /* AutosizingCode.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				05A4C1E32364F0BF00156D56 /* SearchResultCell.swift in Sources */,
 				05A4C1EE2366204A00156D56 /* Service.swift in Sources */,
 				05A32981236F753800DF90C2 /* AppsPageHeader.swift in Sources */,
+				055D07AB238B52E70038E2AA /* AutosizingCode.swift in Sources */,
 				05A3297B236F5E0000DF90C2 /* BaseListController.swift in Sources */,
 				05A3297F236F6C0500DF90C2 /* Extensions.swift in Sources */,
 				05A4C1E623650A0000156D56 /* UIView+Layout.swift in Sources */,
