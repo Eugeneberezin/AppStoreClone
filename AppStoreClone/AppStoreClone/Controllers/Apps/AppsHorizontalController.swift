@@ -20,6 +20,7 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: hCellID)
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         
     }
     
@@ -40,10 +41,7 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
         let height = (view.frame.height - 12 - 12 - 20) / 3
         return .init(width: view.frame.width - 48, height: height )
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 12, left: 16, bottom: 12, right: 16)
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10

@@ -19,7 +19,7 @@ class AppsHeaderhorizontalController: HorizontalSnappingController, UICollection
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: headerCellID)
-        
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         
     }
     
@@ -42,8 +42,6 @@ class AppsHeaderhorizontalController: HorizontalSnappingController, UICollection
         return .init(width: view.frame.width - 48, height: view.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 0, left: 20, bottom: 10, right: 0)
-    }
+    
 
 }
